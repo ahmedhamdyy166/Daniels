@@ -1,0 +1,403 @@
+*{
+    outline: none;
+    scroll-padding-top: 50px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat' 'sans-serif';
+}
+body{
+    font-family: 'Poppins' 'sans-serif';
+}
+
+.hero{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('bg.jpg');
+    background-size: cover;
+}
+.test{
+    font-weight: 800;
+}
+.hero-content{
+
+    flex-direction: column;
+}
+.hero-content h4{
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.hero-content h2{
+    white-space: nowrap;
+    font-size: 3.75rem;
+    font-weight: 200;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+.hero-content_icons{
+    list-style: none;
+}
+.hero-content_icons a{
+    color: #fff;
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.307);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.hero-content-words{
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 400;
+    transition: 0.3 ease;
+    animation: changewidth 7s 1s infinite;
+}
+
+
+.navbar_logo{
+    font-family: 'montserrat' 'sans-serif';
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #343434;
+}
+.nav-link::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    /* background-color: #343434; */
+    left: 0;
+    bottom: 0;
+    transition: 0.5 ease;
+
+}
+.nav-link.active::after{
+    width: 100%;
+}
+.nav-item{
+    font-size: 14px;
+    
+    padding-inline: 20px;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 0;
+    /* color: #343434; */
+    position: relative;
+}
+.about-img img{
+    padding: 0 0 0 30px;
+
+}
+.about-img::after{
+    content: "";
+    position: absolute;
+    width: 80%;
+    left: 0;
+    bottom: -30px;
+    background-image: url("dots.png");
+    background-repeat: repeat;
+    z-index: -1;
+}
+.progress{
+    
+    height: 30px !important;
+}
+.progress-bar{
+    background-color:black !important;
+}
+/* .nav-tabs{
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+    border: none;
+    gap: 20px;
+}
+.nav-tabs .nav-link{
+    border: none;
+    color: #222;
+    font-weight: 700;
+    position: relative;
+    padding: 0;
+}
+.portfolio_card{
+    position: relative;
+}
+.portfolio_info{
+    position: absolute;
+    inset: 10px 5px 5px;
+    background-color: #fffa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    gap: 10px;
+    transition: 0.5s ease;
+}
+.portfolio_info>*{
+    transition: 0.5s ease;
+}
+.portfolio_info h6{
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.portfolio_icons{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio_icons>*{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #343434;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+.portfolio_card:hover .portfolio_info{
+    opacity: 1;
+}
+.portfolio_card:hover .portfolio_info>*{
+    
+    margin: 0;
+} */
+#testimonials{
+    padding: 50px 0;
+}
+.title h2{
+    font-weight: 900;
+    font-size: 40px;
+    position: relative;
+    display: inline-block;
+    z-index: 4;
+}
+.title h2:after{
+    content: "";
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: -10px;
+}
+.carousel-inner {
+    background-color: black;
+}
+
+.carousel-item {
+    background-color: black;
+    color: white; /* Ensure text is visible against the black background */
+}
+
+.carousel-item img {
+    border: 2px solid white; /* Optional: Add a border to images for better visibility */
+}
+
+.carousel-indicators [data-bs-target] {
+    all: unset;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: .5;
+    margin-inline: 4px;
+    cursor: pointer;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+.hero-content-words::after{
+    content: 'Larry Daniels';
+    animation: changeword 7s 1s ease infinite;
+}
+@keyframes changewidth {
+
+    0%,30%,60%,100%{
+        width: 100%;
+        padding-right: 8px;
+    }
+    15%,45%,75%{
+        width: 0%;
+        padding-right: 0px;
+    }
+}
+@keyframes changeword {
+    0%,99%,100%{
+        content: 'Larry Daniels';
+    }
+    40%{
+        content: 'Developer';
+    }
+    60%{
+        content: 'Designer';
+    }
+    
+}
+.servicesec{
+    background-color: #f5f5f5;
+}
+.servicesec h1{
+    position: relative;
+}
+.servicesec h1::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 45%;
+    width: 10%;
+    height: 3px;
+    background-color: black;
+}
+.iconservice i{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color:rgba(128, 128, 128, 0.21);
+    transition: background-color 2s ease;
+}
+.card:hover i {
+    background-color: black;
+    color: #fff;
+}
+.portfoliosec{
+    
+}
+.portfoliosec h1{
+    position: relative;
+}
+
+.portfoliosec h1::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 45%;
+    width: 10%;
+    height: 3px;
+    background-color: black;
+}
+/* .allportfolio{
+    position: relative;
+}
+.portfoliocontent{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} */
+.allportfolio {
+    position: relative;
+}
+
+.portfolio-item {
+    position: relative;
+}
+
+.portfolio-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio-item:hover .portfolio-hover {
+    opacity: 1;
+}
+
+.portfolio-hover h3 {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.portfolio-hover .icons {
+    
+    display: flex;
+    gap: 15px;
+    
+}
+
+.portfolio-hover .icons a {
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.portfolio-hover .icons a:hover {
+    color: #ff6600;
+}
+.teamsletter h1{
+    position: relative;
+}
+
+.teamsletter h1::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 45%;
+    width: 10%;
+    height: 3px;
+    background-color: black;
+}
+
+.cardicons{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    bottom: 5px;
+    background-color: white;
+    
+    opacity: 0;
+    transition: 1s all;
+}
+.socialicons{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+    
+}
+.socialicons:hover{
+    background-color: #fff;
+    color: black;
+}
+.card:hover .cardicons{
+    transform: rotateY(180deg);
+    opacity: 1;
+}
+.cardimg img{
+    transition: 0.5s scale;
+}
+.cardimg:hover img{
+    scale:1.1;
+}
